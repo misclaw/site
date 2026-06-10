@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>misclaw</title>
+    <meta
+      name="description"
+      content="misclaw — a home for small apps and research programs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="masthead">
+        <a class="wordmark" href="/">misclaw<span class="dot">.app</span></a>
+        <p class="tagline">A home for small apps and research programs.</p>
+      </header>
+
+      <main>
+        <section class="projects" aria-labelledby="projects-heading">
+          <div class="projects__header">
+            <h2 id="projects-heading">Projects</h2>
+            <span class="projects__count" id="project-count" hidden></span>
+          </div>
+
+          <!-- Populated from projects.json by app.js -->
+          <ul class="project-list" id="project-list" aria-live="polite"></ul>
+
+          <p class="empty-state" id="empty-state" hidden>
+            No projects yet — they'll appear here as soon as the first one ships.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> misclaw</span>
+        <a href="https://github.com/misclaw">github.com/misclaw</a>
+      </footer>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
