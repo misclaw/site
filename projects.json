@@ -7,6 +7,14 @@
       "repo": "https://github.com/misclaw/mis-calendar",
       "description": "2026 conference calendar for MIS scholars — pick events, export ICS/CSV.",
       "status": "live"
+    },
+    {
+      "name": "MIS Lit Reviewer",
+      "slug": "mis-lit-reviewer",
+      "url": "https://mis-lit-reviewer.misclaw.app",
+      "repo": "https://github.com/misclaw/mis-lit-reviewer",
+      "description": "In-browser semantic search over the IS literature corpus — local-first, no account needed.",
+      "status": "live"
     }
   ]
 }
