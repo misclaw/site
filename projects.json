@@ -1,3 +1,12 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "name": "MIS Scholar Calendar",
+      "slug": "mis-calendar",
+      "url": "https://mis-calendar.misclaw.app",
+      "repo": "https://github.com/misclaw/mis-calendar",
+      "description": "2026 conference calendar for MIS scholars — pick events, export ICS/CSV.",
+      "status": "live"
+    }
+  ]
 }
