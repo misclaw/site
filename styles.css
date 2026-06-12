@@ -27,6 +27,58 @@
   }
 }
 
+/* Manual overrides (theme toggle) beat the system preference above. */
+:root[data-theme="light"] {
+  --bg: #fbfbfa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f4f5f7;
+  --border: #e6e8eb;
+  --text: #1a1c1e;
+  --text-dim: #5f6368;
+  --text-faint: #9aa0a6;
+  --accent: #3b5bdb;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0c0e;
+  --bg-card: #141619;
+  --bg-card-hover: #1b1e22;
+  --border: #24272c;
+  --text: #e8eaed;
+  --text-dim: #9aa0a6;
+  --text-faint: #6b7178;
+  --accent: #7c9cff;
+}
+
+/* Theme-dependent pairs: mascot logo and sun/moon icon. Dark is the default
+   (matches :root above); light flips both, whether from the system preference
+   or the manual toggle. */
+.mc-logo--light,
+.mc-icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .mc-logo--dark,
+  :root:not([data-theme="dark"]) .mc-icon-sun {
+    display: none;
+  }
+  :root:not([data-theme="dark"]) .mc-logo--light,
+  :root:not([data-theme="dark"]) .mc-icon-moon {
+    display: block;
+  }
+}
+
+:root[data-theme="light"] .mc-logo--dark,
+:root[data-theme="light"] .mc-icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .mc-logo--light,
+:root[data-theme="light"] .mc-icon-moon {
+  display: block;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -58,12 +110,49 @@ body {
   margin-bottom: clamp(2.5rem, 7vw, 4.5rem);
 }
 
+.masthead__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: clamp(2rem, 7vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text);
   text-decoration: none;
+  min-width: 0;
+}
+
+.mc-logo {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  flex: none;
+}
+
+.mc-theme {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.mc-theme:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
 }
 
 .wordmark .dot {

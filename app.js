@@ -7,6 +7,21 @@ const countEl = document.getElementById("project-count");
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Theme toggle: no data-theme attribute means "follow the system"; clicking
+// pins an explicit choice in localStorage (read before paint in index.html).
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  const current =
+    document.documentElement.dataset.theme ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : "dark");
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem("theme", next);
+  } catch {}
+});
+
 /** Escape text before inserting into markup. */
 function esc(value) {
   return String(value ?? "").replace(
