@@ -5,7 +5,7 @@
       "slug": "mis-calendar",
       "url": "https://mis-calendar.misclaw.app",
       "repo": "https://github.com/misclaw/mis-calendar",
-      "description": "2026 conference calendar for MIS scholars \u2014 pick events, export ICS/CSV.",
+      "description": "2026 conference calendar for MIS scholars — pick events, export ICS/CSV.",
       "status": "live"
     },
     {
@@ -13,7 +13,7 @@
       "slug": "mis-lit-reviewer",
       "url": "https://mis-lit-reviewer.misclaw.app",
       "repo": "https://github.com/misclaw/mis-lit-reviewer",
-      "description": "Semantic search + daily-updated browser over the IS literature corpus \u2014 with an email digest of new papers.",
+      "description": "Semantic search + daily-updated browser over the IS literature corpus — with an email digest of new papers.",
       "status": "live"
     },
     {
@@ -21,8 +21,16 @@
       "slug": "reference-viewer",
       "url": "https://reference-viewer.misclaw.app",
       "repo": "https://github.com/misclaw/reference-viewer",
-      "description": "Upload paper PDFs \u2014 authoritative references, venue composition, and a citation graph.",
+      "description": "Upload paper PDFs — authoritative references, venue composition, and a citation graph.",
       "status": "live"
+    },
+    {
+      "name": "MIS Daily Digest",
+      "slug": "mis-digest",
+      "url": "https://mis-digest.misclaw.app",
+      "repo": "https://github.com/misclaw/mis-digest",
+      "description": "Daily email digest of newly published Information Systems papers — one message a morning, double opt-in, unsubscribe anytime.",
+      "status": "building"
     }
   ]
 }
