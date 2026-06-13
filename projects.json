@@ -13,7 +13,7 @@
       "slug": "mis-lit-reviewer",
       "url": "https://mis-lit-reviewer.misclaw.app",
       "repo": "https://github.com/misclaw/mis-lit-reviewer",
-      "description": "Semantic search + daily-updated browser over the IS literature corpus — with an email digest of new papers.",
+      "description": "Browse the daily-updated IS literature corpus by date, or search it by meaning — journals, conferences, and preprints in one view.",
       "status": "live"
     },
     {
@@ -30,7 +30,7 @@
       "url": "https://mis-digest.misclaw.app",
       "repo": "https://github.com/misclaw/mis-digest",
       "description": "Daily email digest of newly published Information Systems papers — one message a morning, double opt-in, unsubscribe anytime.",
-      "status": "building"
+      "status": "live"
     }
   ]
 }
