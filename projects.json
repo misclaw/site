@@ -31,6 +31,14 @@
       "repo": "https://github.com/misclaw/mis-digest",
       "description": "Daily email digest of newly published Information Systems papers — one message a morning, double opt-in, unsubscribe anytime.",
       "status": "live"
+    },
+    {
+      "name": "Dataset Reviewer",
+      "slug": "dataset-reviewer",
+      "url": "https://dataset-reviewer.misclaw.app",
+      "repo": "https://github.com/misclaw/dataset-reviewer",
+      "description": "Find newly-proposed ML & NLP datasets and benchmarks by semantic search, updated daily.",
+      "status": "building"
     }
   ]
 }
