@@ -90,6 +90,9 @@ async function render() {
     return;
   }
 
+  // Entries flagged `"hidden": true` stay in the registry but aren't shown.
+  projects = projects.filter((p) => !p.hidden);
+
   if (projects.length === 0) {
     showEmpty();
     return;

@@ -38,7 +38,8 @@
       "url": "https://dataset-reviewer.misclaw.app",
       "repo": "https://github.com/misclaw/dataset-reviewer",
       "description": "Find newly-proposed ML & NLP datasets and benchmarks by meaning — a daily arXiv crawl plus NeurIPS Datasets & Benchmarks, ranked in your browser.",
-      "status": "live"
+      "status": "live",
+      "hidden": true
     }
   ]
 }
