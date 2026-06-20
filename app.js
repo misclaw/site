@@ -8,18 +8,34 @@ const countEl = document.getElementById("project-count");
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Theme toggle: no data-theme attribute means "follow the system"; clicking
-// pins an explicit choice in localStorage (read before paint in index.html).
+// pins an explicit choice. The pin is written to a cookie on .misclaw.app so the
+// light/dark choice stays in sync across every *.misclaw.app site (localStorage
+// is the same-origin fallback). The pre-paint reader in index.html applies it.
+function mcSetTheme(next) {
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem("theme", next);
+  } catch {}
+  try {
+    let c = "mc-theme=" + next + ";path=/;max-age=31536000;samesite=lax";
+    if (
+      location.hostname === "misclaw.app" ||
+      location.hostname.endsWith(".misclaw.app")
+    ) {
+      c += ";domain=.misclaw.app";
+    }
+    if (location.protocol === "https:") c += ";secure";
+    document.cookie = c;
+  } catch {}
+}
+
 document.getElementById("theme-toggle").addEventListener("click", () => {
   const current =
     document.documentElement.dataset.theme ||
     (window.matchMedia("(prefers-color-scheme: light)").matches
       ? "light"
       : "dark");
-  const next = current === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = next;
-  try {
-    localStorage.setItem("theme", next);
-  } catch {}
+  mcSetTheme(current === "dark" ? "light" : "dark");
 });
 
 /** Escape text before inserting into markup. */
