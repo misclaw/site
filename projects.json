@@ -9,11 +9,11 @@
       "status": "live"
     },
     {
-      "name": "MIS Lit Reviewer",
+      "name": "Paper Trails",
       "slug": "mis-lit-reviewer",
       "url": "https://mis-lit-reviewer.misclaw.app",
       "repo": "https://github.com/misclaw/mis-lit-reviewer",
-      "description": "Browse the daily-updated IS literature corpus by date, or search it by meaning — journals, conferences, and preprints in one view.",
+      "description": "Webster & Watson-style IS literature-review workbench — main review within and outside IS, plus backward/forward citation tracing, on your own LLM keys.",
       "status": "live"
     },
     {
